@@ -13,7 +13,7 @@ function callback (name, config, options) {
     path = path
       .replace(/^\//, '')
       .replace(/\*/, '$1')
-    return join('<rootDir>', baseUrl, path)
+    return `<rootDir>/${join(baseUrl, path)}`
   })
   if (options.format === 'string' || path.length === 1) {
     path = path[0]
